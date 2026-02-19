@@ -498,6 +498,32 @@ img {
   transform: translateY(-2px);
 }
 
+/* Sencillo para productos estándar (sin animación) */
+.btn-product {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.25);
+  transition: var(--transition);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-product:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(var(--primary-rgb), 0.35);
+  filter: brightness(1.1);
+}
+
 .btn-large {
   padding: 18px 36px;
   font-size: 17px;
@@ -667,6 +693,11 @@ section {
   transform: translateY(-4px);
 }
 
+/* Neutralize glass-card hover lift inside flip cards to avoid cursor-escape loop */
+.service-card-flip .glass-card:hover {
+  transform: none;
+}
+
 /* ---- SOCIAL PROOF ---- */
 .social-proof {
   padding: 40px 0;
@@ -736,6 +767,20 @@ section {
   height: 360px;
   perspective: 1200px;
   cursor: pointer;
+  /* Isolate stacking context so internal transforms don't affect parent hover area */
+  isolation: isolate;
+  transform: translateZ(0);
+  /* Hardware accel & stability */
+  position: relative;
+}
+
+/* NUCLEAR STABILITY FIX: Invisible overlay to capture mouse events */
+.service-card-flip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  /* Above the rotating inner card */
 }
 
 .service-card-inner {
@@ -744,8 +789,12 @@ section {
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  pointer-events: none;
+  /* Ignore mouse events on the moving part to prevent flicker */
 }
 
+/* Flip on hover (Desktop) AND via JS class (Mobile click) */
 .service-card-flip:hover .service-card-inner,
 .service-card-flip.flipped .service-card-inner {
   transform: rotateY(180deg);
@@ -782,28 +831,21 @@ section {
 }
 
 /* SVG Background colours per card */
+.svc-yeso {
+  background: linear-gradient(160deg, #3A3028, #4B3D30);
+}
+
+.svc-resina {
+  background: linear-gradient(160deg, #2C1B12, #341E18);
+}
+
+.svc-bisuteria {
+  background: linear-gradient(160deg, #2A1F2E, #3A2618);
+}
+
+/* legacy names kept for compatibility */
 .svc-ceramica {
   background: linear-gradient(160deg, #3A2618, #4B2E1F);
-}
-
-.svc-tejidos {
-  background: linear-gradient(160deg, #2C3318, #3A2618);
-}
-
-.svc-madera {
-  background: linear-gradient(160deg, #3D2812, #4B3020);
-}
-
-.svc-joyeria {
-  background: linear-gradient(160deg, #2C1B12, #3A2018);
-}
-
-.svc-velas {
-  background: linear-gradient(160deg, #3A2618, #2C2018);
-}
-
-.svc-custom {
-  background: linear-gradient(160deg, #2C1B12, #3A2618);
 }
 
 .service-overlay {
@@ -1070,6 +1112,7 @@ section {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   -webkit-mask-image: none;
+  mask-image: none;
   box-shadow:
     inset 0 1px 0 rgba(var(--olive-rgb), 0.15),
     inset 0 -1px 0 rgba(var(--primary-rgb), 0.15);
@@ -1350,6 +1393,162 @@ section {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 600;
+}
+
+/* ---- CATALOG PAGES ---- */
+.catalog-page {
+  padding-top: 120px;
+}
+
+.catalog-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.catalog-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.catalog-breadcrumb a {
+  color: var(--text-quaternary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.catalog-breadcrumb a:hover {
+  color: var(--olive-light);
+}
+
+.catalog-breadcrumb span {
+  color: var(--text-secondary);
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  padding-bottom: 100px;
+}
+
+.product-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(var(--primary-rgb), 0.35);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  height: 240px;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid rgba(var(--primary-rgb), 0.1);
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-placeholder-svg {
+  width: 80px;
+  height: 80px;
+  opacity: 0.5;
+}
+
+.product-info {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-category {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--olive-light);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.product-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-400);
+  margin-bottom: 12px;
+}
+
+.product-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+  /* Pushes button to bottom */
+}
+
+.btn-pedir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  background: transparent;
+  border: 1px solid rgba(var(--olive-rgb), 0.4);
+  color: var(--olive-light);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-pedir:hover {
+  background: rgba(var(--olive-rgb), 0.1);
+  border-color: var(--olive);
+  color: #fff;
+}
+
+.btn-pedir svg {
+  width: 18px;
+  height: 18px;
 }
 
 /* ---- RESPONSIVE ---- */

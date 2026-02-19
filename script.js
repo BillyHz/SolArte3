@@ -11,11 +11,11 @@
   for (let i = 0; i < 50; i++) {
     const p = document.createElement('div');
     p.className = 'particle';
-    p.style.left   = Math.random() * 100 + '%';
-    p.style.top    = Math.random() * 100 + '%';
-    p.style.width  = (2 + Math.random() * 3) + 'px';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.top = Math.random() * 100 + '%';
+    p.style.width = (2 + Math.random() * 3) + 'px';
     p.style.height = p.style.width;
-    p.style.animationDelay    = Math.random() * 20 + 's';
+    p.style.animationDelay = Math.random() * 20 + 's';
     p.style.animationDuration = (15 + Math.random() * 10) + 's';
     container.appendChild(p);
   }
@@ -50,14 +50,14 @@ window.addEventListener('scroll', debounce(() => {
 
 // ── MOBILE MENU ─────────────────────────────────────
 const menuToggle = document.getElementById('menuToggle');
-const mobileNav  = document.getElementById('navLinks');
+const mobileNav = document.getElementById('navLinks');
 
 menuToggle.addEventListener('click', () => {
   mobileNav.classList.toggle('open');
   const spans = menuToggle.querySelectorAll('span');
   const isOpen = mobileNav.classList.contains('open');
   spans[0].style.transform = isOpen ? 'translateY(7px) rotate(45deg)' : '';
-  spans[1].style.opacity   = isOpen ? '0' : '';
+  spans[1].style.opacity = isOpen ? '0' : '';
   spans[2].style.transform = isOpen ? 'translateY(-7px) rotate(-45deg)' : '';
 });
 
@@ -71,7 +71,8 @@ mobileNav.querySelectorAll('a').forEach(a => {
   });
 });
 
-// ── FLIP CARDS (mobile tap) ─────────────────────────
+// ── FLIP CARDS ──────────────────────────────────────
+// Mobile tap behavior only (Desktop uses CSS hover)
 document.querySelectorAll('.service-card-flip').forEach(card => {
   card.addEventListener('click', () => {
     if (window.innerWidth <= 767) {
@@ -79,6 +80,7 @@ document.querySelectorAll('.service-card-flip').forEach(card => {
     }
   });
 });
+
 
 // ── INTERSECTION OBSERVER (scroll reveal + counters) ─
 const revealObserver = new IntersectionObserver((entries) => {
@@ -145,12 +147,38 @@ if (form) {
   form.addEventListener('submit', e => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
-    const orig = btn.textContent;
-    btn.textContent = '✓ ¡Mensaje enviado!';
-    btn.style.background = 'linear-gradient(135deg, #6A8E3F, #5a7a34)';
+    const originalText = btn.innerHTML;
+
+    // 1. Get values
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const tipoSelect = document.getElementById('tipo');
+    const tipo = tipoSelect.options[tipoSelect.selectedIndex].text;
+    const tipoValue = tipoSelect.value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    // 2. Construct WhatsApp message
+    let text = `👋 Hola SolArte, mi nombre es *${nombre}*.`;
+
+    if (tipoValue) {
+      text += `\n\nEstoy interesado en: *${tipo}*.`;
+    }
+
+    text += `\n\n📝 *Mensaje:* ${mensaje}`;
+    text += `\n\n📧 *Mis datos de contacto:* ${email}`;
+
+    // 3. Open WhatsApp
+    const phone = '50671753867'; // Updated phone number
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+
+    // 4. UI Feedback
+    btn.innerHTML = '✓ Abriendo WhatsApp...';
+    btn.style.background = 'linear-gradient(135deg, #25D366, #128C7E)'; // WhatsApp Green
     btn.disabled = true;
+
     setTimeout(() => {
-      btn.textContent = orig;
+      btn.innerHTML = originalText;
       btn.style.background = '';
       btn.disabled = false;
       form.reset();
