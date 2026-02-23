@@ -1,0 +1,70 @@
+imagen: Vaca.jpg
+
+nombre: Vaca de Pared
+
+precio: ₡18 000
+
+descripcion: Figura de vaca en girasol para colgar en la pared. Hecha de arcilla
+
+Tamaño: 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+imagen: Pareja_Up.jpg
+
+nombre: Figura de Pareja de Up
+
+precio: ₡18 000
+
+descripcion: Pareja de UP con una mini maceta sobre un corazón. Hecho en Resina
+
+Tamaño: 24cm alto
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+imagen: Ángel_Hombre.jpg
+
+nombre: Figura de Angel Orando
+
+precio: ₡10 000
+
+descripcion: Ángel orando. Hecho en yeso cerámico.
+
+Tamaño: 14cm Alto
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+imagen: Angel_Mujer.jpg
+
+nombre: Figura de Ángel 
+
+precio: ₡10 000
+
+descripcion: Ángel. Hecho en yeso cerámico
+
+Tamaño: 14cm Alto
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+imagen: Mario.jpg
+
+nombre: Mario
+
+precio: ₡10 000
+
+descripcion: Figura de Mario de Mario Bros. Hecho en yeso cerámico
+
+Tamaño: 14cm Alto
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+imagen: Mafalda.jpg
+
+nombre: Figura de Mafalda
+
+precio: ₡10 000
+
+descripcion: Figura de Mafalda. Hecho en yeso cerámico
+
+Tamaño: 14cm Alto

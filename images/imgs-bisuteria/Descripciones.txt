@@ -1,0 +1,94 @@
+imagen:Juego_CorazonFlechado_Dorado.jpg
+
+nombre: Juego de Corazon y Flecha Love
+
+precio: ₡1000
+
+descripcion: Juego de collar y aretes de corazón con flecha color dorado. Hecho de acero inoxidable.
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+imagen:Juego_Delfin_Dorado
+
+nombre: Juego de Delfín dorado
+
+precio: ₡1000
+
+descripcion: Juego de collar y aretes de delfín color dorado. Hecho de acero inoxidable.
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+imagen:Juego_Delfin_Plateado
+
+nombre: Juego de Delfín plateado
+
+precio: ₡1000
+
+descripcion: Juego de collar y aretes de delfín color plateado. Hecho de acero inoxidable.
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+imagen:Juego_Elefante_Dorado.jpg
+
+nombre: Juego de Elefante dorado
+
+precio: ₡1000
+
+descripcion: Juego de collar y aretes de elefante color dorado. Hecho de acero inoxidable
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+imagen:Juego_Flor_Plateada.jpg
+
+nombre: Juego de Flor plateada
+
+precio: ₡1000
+
+descripcion: Juego de collar y aretes de flor color plateada. Hecho de acero inoxidable
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+imagen:Juego_LunaEstrella_Dorada.jpg
+
+nombre: Juego de Luna con Estrella
+
+precio: ₡1000
+
+descripcion: Juego de collar y aretes de luna con estrella color dorado. Hecho de acero inoxidable
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+imagen:Juego_Mariposa_Plateada
+
+nombre: Juego de Mariposa
+
+precio: ₡1000
+
+descripcion: Juego de collar y aretes de mariposa color plateado. Hecho de acero inoxidable
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+imagen:Juego_Rosa_Dorada.jpg
+
+nombre: Juego de Rosa
+
+precio: ₡1000
+
+descripcion: Juego de collar y aretes de rosa color dorado. Hecho de acero inoxidable
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+imagen:Juego_Unicornio_Dorado.jpg
+
+nombre: Juego de Unicornio
+
+precio: ₡1000
+
+descripcion: Juego de collar y aretes de unicornio color dorado. Hecho de acero inoxidable
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////

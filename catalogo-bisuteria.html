@@ -25,21 +25,41 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="index.html" class="nav-logo">
-                <svg width="40" height="40" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="22" cy="22" r="20" fill="#2C1B12" stroke="#B84A1E" stroke-width="1.5" />
-                    <circle cx="22" cy="22" r="8" fill="#B84A1E" opacity="0.9" />
-                    <line x1="22" y1="4" x2="22" y2="10" stroke="#B84A1E" stroke-width="2" stroke-linecap="round" />
-                    <line x1="22" y1="34" x2="22" y2="40" stroke="#B84A1E" stroke-width="2" stroke-linecap="round" />
-                    <line x1="4" y1="22" x2="10" y2="22" stroke="#B84A1E" stroke-width="2" stroke-linecap="round" />
-                    <line x1="34" y1="22" x2="40" y2="22" stroke="#B84A1E" stroke-width="2" stroke-linecap="round" />
-                    <line x1="8.7" y1="8.7" x2="13.2" y2="13.2" stroke="#B84A1E" stroke-width="2"
-                        stroke-linecap="round" />
-                    <line x1="30.8" y1="30.8" x2="35.3" y2="35.3" stroke="#B84A1E" stroke-width="2"
-                        stroke-linecap="round" />
-                    <line x1="35.3" y1="8.7" x2="30.8" y2="13.2" stroke="#B84A1E" stroke-width="2"
-                        stroke-linecap="round" />
-                    <line x1="13.2" y1="30.8" x2="8.7" y2="35.3" stroke="#B84A1E" stroke-width="2"
-                        stroke-linecap="round" />
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="rg1" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#E84030" />
+                            <stop offset="100%" stop-color="#F5B731" />
+                        </linearGradient>
+                        <linearGradient id="rg2" x1="0" y1="1" x2="0" y2="0">
+                            <stop offset="0%" stop-color="#F5B731" />
+                            <stop offset="100%" stop-color="#E84030" />
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(50,50)">
+                        <ellipse rx="3.5" ry="14" cx="0" cy="-32" fill="url(#rg1)" />
+                        <ellipse rx="3.5" ry="14" cx="0" cy="-32" fill="url(#rg2)" transform="rotate(30)" />
+                        <ellipse rx="3.5" ry="14" cx="0" cy="-32" fill="url(#rg1)" transform="rotate(60)" />
+                        <ellipse rx="3.5" ry="14" cx="0" cy="-32" fill="url(#rg2)" transform="rotate(90)" />
+                        <ellipse rx="3.5" ry="14" cx="0" cy="-32" fill="url(#rg1)" transform="rotate(120)" />
+                        <ellipse rx="3.5" ry="14" cx="0" cy="-32" fill="url(#rg2)" transform="rotate(150)" />
+                        <ellipse rx="3.5" ry="14" cx="0" cy="-32" fill="url(#rg1)" transform="rotate(180)" />
+                        <ellipse rx="3.5" ry="14" cx="0" cy="-32" fill="url(#rg2)" transform="rotate(210)" />
+                        <ellipse rx="3.5" ry="14" cx="0" cy="-32" fill="url(#rg1)" transform="rotate(240)" />
+                        <ellipse rx="3.5" ry="14" cx="0" cy="-32" fill="url(#rg2)" transform="rotate(270)" />
+                        <ellipse rx="3.5" ry="14" cx="0" cy="-32" fill="url(#rg1)" transform="rotate(300)" />
+                        <ellipse rx="3.5" ry="14" cx="0" cy="-32" fill="url(#rg2)" transform="rotate(330)" />
+                        <circle r="2.5" cx="0" cy="-44" fill="#E84030" transform="rotate(15)" />
+                        <circle r="2.5" cx="0" cy="-44" fill="#E84030" transform="rotate(75)" />
+                        <circle r="2.5" cx="0" cy="-44" fill="#E84030" transform="rotate(135)" />
+                        <circle r="2.5" cx="0" cy="-44" fill="#E84030" transform="rotate(195)" />
+                        <circle r="2.5" cx="0" cy="-44" fill="#E84030" transform="rotate(255)" />
+                        <circle r="2.5" cx="0" cy="-44" fill="#E84030" transform="rotate(315)" />
+                    </g>
+                    <circle cx="50" cy="50" r="16" fill="#F5B731" />
+                    <path
+                        d="M50 42 C54 42 56 46 56 50 C56 54 52 57 48 56 C44 55 42 51 43 47 C44 43 48 40 52 40 C57 40 60 44 60 50 C60 56 55 60 50 60"
+                        stroke="#FFF8E0" stroke-width="2.5" fill="none" stroke-linecap="round" />
                 </svg>
                 <span class="nav-brand">SolArte</span>
             </a>
@@ -64,26 +84,19 @@
             <!-- PRODUCT GRID -->
             <div class="catalog-grid">
 
-                <!-- ==========================================
-                     PRODUCTO 1 - PULSERA
-                     ========================================== -->
+                <!-- Producto 1: Juego de Corazon y Flecha Love -->
                 <div class="product-card">
                     <div class="product-image">
-                        <!-- Para poner tu foto: <img src="bisuteria1.jpg" alt="Pulsera"> -->
-                        <svg class="product-placeholder-svg" viewBox="0 0 24 24" fill="none" stroke="#2A1F2E"
-                            stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M12 2v20M2 12h20" />
-                        </svg>
+                        <img src="images/imgs-bisuteria/Juego_CorazonFlechado_Dorado.jpg"
+                            alt="Juego de Corazon y Flecha Love">
                     </div>
                     <div class="product-info">
-                        <div class="product-category">Pulseras</div>
-                        <h3 class="product-title">Pulsera de Piedras Naturales</h3>
-                        <div class="product-price">₡6,500</div>
-                        <p class="product-desc">Pulsera elástica con piedras semipreciosas (amatista, cuarzo rosa) y
-                            dije de acero inoxidable.</p>
-
-                        <a href="https://wa.me/50671753867?text=Hola,%20me%20interesa%20la%20Pulsera%20Piedras"
+                        <div class="product-category">Bisutería</div>
+                        <h3 class="product-title">Juego de Corazón y Flecha Love</h3>
+                        <div class="product-price">₡1,000</div>
+                        <p class="product-desc">Juego de collar y aretes de corazón con flecha color dorado. Hecho de
+                            acero inoxidable.</p>
+                        <a href="https://wa.me/50671753867?text=Hola,%20me%20interesa%20el%20Juego%20de%20Corazón%20y%20Flecha%20Love"
                             target="_blank" class="btn-product btn-full">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 style="width: 18px; height: 18px; margin-right: 8px;">
@@ -95,23 +108,18 @@
                     </div>
                 </div>
 
-                <!-- ==========================================
-                     PRODUCTO 2 - COLLAR LARGO
-                     ========================================== -->
+                <!-- Producto 2: Juego de Delfín dorado -->
                 <div class="product-card">
                     <div class="product-image">
-                        <svg class="product-placeholder-svg" viewBox="0 0 24 24" fill="none" stroke="#2A1F2E"
-                            stroke-width="1.5">
-                            <path d="M12 3a9 9 0 0 0-9 9v7c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-7a9 9 0 0 0-9-9z" />
-                        </svg>
+                        <img src="images/imgs-bisuteria/Juego_Delfin_Dorado.jpg" alt="Juego de Delfín dorado">
                     </div>
                     <div class="product-info">
-                        <div class="product-category">Collares</div>
-                        <h3 class="product-title">Collar Boho Chic</h3>
-                        <div class="product-price">₡9,500</div>
-                        <p class="product-desc">Collar largo con flecos de gamuza y cuentas de madera. Estilo bohemio
-                            ideal para usar con blusas básicas.</p>
-                        <a href="https://wa.me/50671753867?text=Hola,%20me%20interesa%20el%20Collar%20Boho"
+                        <div class="product-category">Bisutería</div>
+                        <h3 class="product-title">Juego de Delfín Dorado</h3>
+                        <div class="product-price">₡1,000</div>
+                        <p class="product-desc">Juego de collar y aretes de delfín color dorado. Hecho de acero
+                            inoxidable.</p>
+                        <a href="https://wa.me/50671753867?text=Hola,%20me%20interesa%20el%20Juego%20de%20Delfín%20dorado"
                             target="_blank" class="btn-product btn-full">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 style="width: 18px; height: 18px; margin-right: 8px;">
@@ -123,25 +131,19 @@
                     </div>
                 </div>
 
-                <!-- ==========================================
-                     PRODUCTO 3 - ANILLO
-                     ========================================== -->
+                <!-- Producto 3: Juego de Delfín plateado -->
                 <div class="product-card">
                     <div class="product-image">
-                        <svg class="product-placeholder-svg" viewBox="0 0 24 24" fill="none" stroke="#2A1F2E"
-                            stroke-width="1.5">
-                            <circle cx="12" cy="12" r="7" />
-                            <path d="M12 9v6M9 12h6" />
-                        </svg>
+                        <img src="images/imgs-bisuteria/Juego_Delfin_Plateado.jpg" alt="Juego de Delfín plateado">
                     </div>
                     <div class="product-info">
-                        <div class="product-category">Anillos</div>
-                        <h3 class="product-title">Anillo Ajustable Alambrismo</h3>
-                        <div class="product-price">₡4,000</div>
-                        <p class="product-desc">Anillo hecho a mano con técnica de alambrismo y cristal checo. Ajustable
-                            a cualquier talla.</p>
-                        <a href="https://wa.me/50671753867?text=Hola,%20me%20interesa%20el%20Anillo" target="_blank"
-                            class="btn-product btn-full">
+                        <div class="product-category">Bisutería</div>
+                        <h3 class="product-title">Juego de Delfín Plateado</h3>
+                        <div class="product-price">₡1,000</div>
+                        <p class="product-desc">Juego de collar y aretes de delfín color plateado. Hecho de acero
+                            inoxidable.</p>
+                        <a href="https://wa.me/50671753867?text=Hola,%20me%20interesa%20el%20Juego%20de%20Delfín%20plateado"
+                            target="_blank" class="btn-product btn-full">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 style="width: 18px; height: 18px; margin-right: 8px;">
                                 <path
@@ -152,24 +154,133 @@
                     </div>
                 </div>
 
-                <!-- ==========================================
-                     PRODUCTO 4 - RECUERDOS
-                     ========================================== -->
+                <!-- Producto 4: Juego de Elefante dorado -->
                 <div class="product-card">
                     <div class="product-image">
-                        <svg class="product-placeholder-svg" viewBox="0 0 24 24" fill="none" stroke="#2A1F2E"
-                            stroke-width="1.5">
-                            <path
-                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                        </svg>
+                        <img src="images/imgs-bisuteria/Juego_Elefante_Dorado.jpg" alt="Juego de Elefante dorado">
                     </div>
                     <div class="product-info">
-                        <div class="product-category">Recuerdos</div>
-                        <h3 class="product-title">Decenarios para Bautizo</h3>
-                        <div class="product-price">₡22,000 (docena)</div>
-                        <p class="product-desc">Paquete de 12 pulseras decenario con perlas y angelito. Incluye tarjeta
-                            personalizada y bolsita de organza.</p>
-                        <a href="https://wa.me/50671753867?text=Hola,%20me%20interesan%20los%20Decenarios"
+                        <div class="product-category">Bisutería</div>
+                        <h3 class="product-title">Juego de Elefante Dorado</h3>
+                        <div class="product-price">₡1,000</div>
+                        <p class="product-desc">Juego de collar y aretes de elefante color dorado. Hecho de acero
+                            inoxidable.</p>
+                        <a href="https://wa.me/50671753867?text=Hola,%20me%20interesa%20el%20Juego%20de%20Elefante%20dorado"
+                            target="_blank" class="btn-product btn-full">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                style="width: 18px; height: 18px; margin-right: 8px;">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg>
+                            Solicitar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Producto 5: Juego de Flor plateada -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/imgs-bisuteria/Juego_Flor_Plateada.jpg" alt="Juego de Flor plateada">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Bisutería</div>
+                        <h3 class="product-title">Juego de Flor Plateada</h3>
+                        <div class="product-price">₡1,000</div>
+                        <p class="product-desc">Juego de collar y aretes de flor color plateada. Hecho de acero
+                            inoxidable.</p>
+                        <a href="https://wa.me/50671753867?text=Hola,%20me%20interesa%20el%20Juego%20de%20Flor%20plateada"
+                            target="_blank" class="btn-product btn-full">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                style="width: 18px; height: 18px; margin-right: 8px;">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg>
+                            Solicitar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Producto 6: Juego de Luna con Estrella -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/imgs-bisuteria/Juego_LunaEstrella_Dorada.jpg" alt="Juego de Luna con Estrella">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Bisutería</div>
+                        <h3 class="product-title">Juego de Luna con Estrella</h3>
+                        <div class="product-price">₡1,000</div>
+                        <p class="product-desc">Juego de collar y aretes de luna con estrella color dorado. Hecho de
+                            acero inoxidable.</p>
+                        <a href="https://wa.me/50671753867?text=Hola,%20me%20interesa%20el%20Juego%20de%20Luna%20con%20Estrella"
+                            target="_blank" class="btn-product btn-full">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                style="width: 18px; height: 18px; margin-right: 8px;">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg>
+                            Solicitar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Producto 7: Juego de Mariposa -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/imgs-bisuteria/Juego_Mariposa_Plateada.jpg" alt="Juego de Mariposa">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Bisutería</div>
+                        <h3 class="product-title">Juego de Mariposa</h3>
+                        <div class="product-price">₡1,000</div>
+                        <p class="product-desc">Juego de collar y aretes de mariposa color plateado. Hecho de acero
+                            inoxidable.</p>
+                        <a href="https://wa.me/50671753867?text=Hola,%20me%20interesa%20el%20Juego%20de%20Mariposa"
+                            target="_blank" class="btn-product btn-full">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                style="width: 18px; height: 18px; margin-right: 8px;">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg>
+                            Solicitar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Producto 8: Juego de Rosa -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/imgs-bisuteria/Juego_Rosa_Dorada.jpg" alt="Juego de Rosa">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Bisutería</div>
+                        <h3 class="product-title">Juego de Rosa</h3>
+                        <div class="product-price">₡1,000</div>
+                        <p class="product-desc">Juego de collar y aretes de rosa color dorado. Hecho de acero
+                            inoxidable.</p>
+                        <a href="https://wa.me/50671753867?text=Hola,%20me%20interesa%20el%20Juego%20de%20Rosa"
+                            target="_blank" class="btn-product btn-full">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                style="width: 18px; height: 18px; margin-right: 8px;">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg>
+                            Solicitar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Producto 9: Juego de Unicornio -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/imgs-bisuteria/Juego_Unicornio_Dorado.jpg" alt="Juego de Unicornio">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Bisutería</div>
+                        <h3 class="product-title">Juego de Unicornio</h3>
+                        <div class="product-price">₡1,000</div>
+                        <p class="product-desc">Juego de collar y aretes de unicornio color dorado. Hecho de acero
+                            inoxidable.</p>
+                        <a href="https://wa.me/50671753867?text=Hola,%20me%20interesa%20el%20Juego%20de%20Unicornio"
                             target="_blank" class="btn-product btn-full">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 style="width: 18px; height: 18px; margin-right: 8px;">
@@ -189,7 +300,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2025 SolArte. Hecho en Costa Rica.</p>
+                <p>&copy; 2026 SolArte. Hecho en Costa Rica.</p>
             </div>
         </div>
     </footer>
